@@ -1,22 +1,18 @@
 ﻿
 @{
-    ViewBag.Title = "Book details";   
-
+    ViewBag.Title = "Book details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<html>
-<head>
-    <title>@ViewBag.Title</title>
-</head>
-<body>
-    <div>
-        <h1>@ViewBag.SeriesTitle</h1>
-        <h2>Issue #@ViewBag.issueNumber</h2>
-        <h5>Description:</h5>
-        <div>@Html.Raw(ViewBag.description)</div>
-        @if (ViewBag.artists.Length > 0)
-        {
-            <h5>Artists: </h5>
+
+<div>
+    <h1>@ViewBag.SeriesTitle</h1>
+    <h2>Issue #@ViewBag.issueNumber</h2>
+    <h5>Description:</h5>
+    <div>@Html.Raw(ViewBag.description)</div>
+    @if (ViewBag.artists.Length > 0)
+    {
+        <h5>Artists: </h5>
             <div>
                 <ul>
                     @foreach (var item in ViewBag.artists)
@@ -26,7 +22,5 @@
                     }
                 </ul>
             </div>
-        }
-    </div>
-</body>
-</html>
+    }
+</div>
