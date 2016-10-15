@@ -61,5 +61,10 @@ namespace ComicBook.Data
         {
             return _comicBooks.Where(x => x.ID == id).SingleOrDefault();
         }
+
+        public ComicBooks[] GetComicBooks()
+        {
+            return _comicBooks;
+        }
     }
 }

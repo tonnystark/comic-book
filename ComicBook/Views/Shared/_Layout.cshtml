@@ -26,7 +26,10 @@
             </div>
         </div>
     </div>
-
+    @if (ViewBag.ShowBackBar != null && ViewBag.ShowBackBar)
+    {
+        @RenderSection("BackButton", false)
+    }
     <div class="container body-content">
         @RenderBody()
         <hr />
@@ -34,7 +37,6 @@
             <p>&copy; @DateTime.Now.Year - Comic Book Gallery</p>
         </footer>
     </div>
-
     <script src="~/Scripts/jquery-1.10.2.min.js"></script>
     <script src="~/Scripts/bootstrap.min.js"></script>
 </body>

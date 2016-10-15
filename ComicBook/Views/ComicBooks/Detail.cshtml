@@ -1,9 +1,17 @@
 ﻿@model ComicBook.Models.ComicBooks
 @{
     ViewBag.Title = "Book details";
+    ViewBag.ShowBackBar = true;
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
+@section BackButton{
+    <div class="backbar">
+        <div class="container">
+            @Html.ActionLink("Return", "Index", null, new {@class = "btn btn-default" })
+        </div>
+    </div>
+}
 
 <h2>@Model.DisplayText</h2>
 
